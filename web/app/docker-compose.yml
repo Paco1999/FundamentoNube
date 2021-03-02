@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+
+  measurementapp:
+    image: webdevops/php-apache:7.4
+    restart: always
+    environment:
+      PHP_DISPALY_ERRORS: 1
+    ports:
+      - 82:88
+    volumes:
+      - ./appcode:/app
+      
